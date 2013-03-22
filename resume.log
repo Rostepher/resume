@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Arch Linux) (format=pdflatex 2013.3.21)  21 MAR 2013 22:32
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Arch Linux) (format=pdflatex 2013.3.21)  21 MAR 2013 22:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -402,7 +402,7 @@ ts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public
 cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/
 share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on resume.pdf (1 page, 104628 bytes).
+Output written on resume.pdf (1 page, 104620 bytes).
 PDF statistics:
  49 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream

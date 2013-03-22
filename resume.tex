@@ -4,8 +4,8 @@
 \usepackage{anysize}
 \usepackage[pdftex, unicode]{hyperref}
 \hypersetup{
-	pdftitle={William Orr's Resume},
-	pdfauthor={William Orr},
+	pdftitle={Alexander Kyte's Resume},
+	pdfauthor={Alexander Kyte},
 	pdfborder={0 0 0},
 	% Not sure if this is needed.
 	unicode=true
@@ -18,53 +18,42 @@
 \newcommand{\rdate}[1]{\hfill {\small #1}}
 \renewcommand{\employer}[5]{\item[#1] - #2 \rdate{#3} \\* #4 \rurl{#5} \\*}
 \begin{document}
-\name{\Huge William Orr}
+\name{\Huge Alexander Kyte}
 \begin{resume}
 \section{\mysidestyle Contact \\ Information} \vspace{2mm}
 	\begin{asparablank}
 		\item Rochester Institute of Technology \hfill 36W344 Ferson Creek Road
-		\item 2050 Nathaniel Rochester Hall \hfill St Charles, Illinois 60174
+		\item 2325 Nathaniel Rochester Hall \hfill St Charles, Illinois 60174
 		\item Rochester, NY 14623 \hfill
-		\href{mailto:will@worrbase.com}{will@worrbase.com}
-		\item (585) 708-9677 \hfill
+		\href{mailto:alexanderkyte@gmail.com}{alexanderkyte@gmail.com}
+		\href{mailto:amk8950@rit.edu}{amk8950@rit.edu}
+	\end{asparablank}
+
+\section{\mysidestyle Objective} \vspace{2mm}
+	\begin{asparablank}
+		\small 
+		I am an RIT student with interests in compiler construction, language design, systems programming, and mobile development seeking a summer internship in the field of mobile development and user experience design. 
 	\end{asparablank}
 
 \section{\mysidestyle Education}
 	\begin{compactdesc}
 		\item[Rochester Institute of Technology] - Rochester, NY \rdate{September 2008 - Present}
 		\begin{compactitem} { \small
-			\item Major: B.S. Applied Networking and Systems Administration
-			\item PFOS GPA: 3.1
-			\item Minor: Computer Science
-			\item Expected graduation: March 2013
+			\item Major: B.S. Computer Science
+			\item PFOS GPA: 4.0
+			\item Minor: Applied Mathematics
+			\item Expected graduation: January 2016
 		} \end{compactitem}
 	\end{compactdesc}
 
 \section{\mysidestyle Experience}
 	\begin{asparadesc}
-		\employer{LinkedIn}{Mountain View, CA}{May 2012 - August 2012}{Systems Administrator}{http://linkedin.com}
+		\employer{MacSmith}{Portland, ME}{November 2011 - March 2012}{Database and Networking Aid/Intern}{http://www.themacsmith.com/onlinedata.html}
 
 		\small
-		Managed large number of machines running both Solaris and Red Hat Linux. Made heavy use of cfengine
-		to automate large tasks. Wrote python tools to track and audit login information
-		as well as other logged data from logstash. Wrote bash and perl tools to perform administrative tasks.
-		\normalsize
-		\\
-
-        \employer{Wegmans Food Markets}{Rochester, NY}{November 2010 - May 2011}{UNIX Administrator and DBA}{http://www.wegmans.com}
-
-        \small
-        Manage users and user access rights in AIX, Solaris, Oracle and
-        Informix. Write management and utility SQL and PL/SQL scripts for use in Oracle and
-        SQL Server.  Perform variety of more varied tasks as needed.
-		\normalsize
-		\\
+		I helped manage a small number of Apple Servers which ran the company website.
+		I provided assistance in debugging configuration issues and small database migration.
 		
-		\employer{RIT Information \& Technology Services}{Rochester, NY}{September 2010 - Present}{Systems Operator}{http://www.rit.edu/its/}
-
-		\small
-		Monitor and debug overnight backups and batch jobs for RIT
-		computer systems. Responsibilities include monitoring EMC NetWorker backups as well as batch jobs on IBM z/OS mainframe platform.
 		\normalsize
 		\\
 	\end{asparadesc}
@@ -72,75 +61,36 @@
 \section{\mysidestyle Technical Skills}
 	\begin{compactdesc}
 		\item[Languages] \begin{inparaenum} { \small
-			\item Perl
+			\item Python/Ruby
 			\item Java
-			\item C/C++/C\#
-			\item bash
-			\item Python
-			\item PL/SQL
+			\item C/C++/Limited Objective-C
+			\item x86 Assembly
+			\item bash/zsh
+			\item Lisp/Haskell/Limited ML
+			\item SQL
 		} \end{inparaenum}
 		\item[Operating Systems] \begin{inparaenum} { \small
 			\item Linux -
 			\begin{inparablank}
 				\item Debian and derivatives,
 				\item Gentoo,
-				\item CentOS
+				\item Slackware
 			\end{inparablank}
-			\item OpenBSD
 			\item FreeBSD
-     			\item AIX
-			\item Solaris
-			\item IBM z/OS
-			\item Windows
-		} \end{inparaenum}
-		\item[Services] \begin{inparaenum} { \small
-			\item MySQL, PostgreSQL, Oracle and Informix
-			\item Dovecot and Postfix
-			\item ISC-DHCP
-			\item BIND9 and Windows DNS
-			\item Active Directory, NIS, Kerberos, and LDAP
-			\item NFS, Samba
-            \item AIX auditing
-            \item Symantec NetBackup
 		} \end{inparaenum}
 	\end{compactdesc}
-
-\section{\mysidestyle Extracurricular}
-	\begin{asparablank}
-		\item {\bf CSH ({\small Computer Science House})}\rurl{http://www.csh.rit.edu/}
-		\small	\item Network and Systems Administrator \hfill February 2009 - Present
-				\item Operation Communications Director \hfill March 2010 - January 2011
-	\end{asparablank}
 	
 \section{\mysidestyle Projects}
 	\begin{asparablank}
-		\item {\bf Auditing tools}
+		\item {\bf Minimum Viable Window Manager}
 		
-		\small Wrote tools to audit user management that pulled from Logstash and CFEngine data. Wrote
-		python web frontend that summarizd all of this data as well as displaying normal usage patterns
-		using Pylons and SQLAchemy. Backed by a MySQL database.
+		\small Wrote a small floating window manager (< 229 SLOC of C) for linux/FreeBSD in order to learn the Xorg api and to gain experience designing reliable event-driven interfaces. 
 		\normalsize
 		\\
 		
-		\item {\bf AIX Auditing Deployment}
+		\item {\bf Quoridor}
 		
-		\small Designed and deployed auditing strategy to AIX cluster.
-		Implemented log rotation (in ksh88), as well as syslog
-		integration. Determined audit needs based on client's request,
-		and designed audit system appropriately. Implemented log
-		shipping to QRadar.
-		\normalsize
-		\\
-		
-		\item {\bf Wireless Hotspot with Content Injection}
-		
-		\small Setup and deployed chillispot and Squid proxy server.
-        Created wireless hotspot that requires RADIUS login to access the
-        internet. Web browsing data is cached with Squid, and sent to ICAP
-        service called Greasyspoon that injects advertisements into web
-        browsing. Wrote advertisement management infrastructure in Perl using
-        Dancer web framework. Wrote email injection service in C using iptables
-        and libnfqueue to redirect traffic.
+		\small Wrote a small graph-based board game AI in a class setting.
 		\normalsize
 		\\
 	\end{asparablank}	

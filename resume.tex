@@ -1,111 +1,103 @@
-\documentclass[letter,margin,line]{resume}
+\documentclass[letterpaper,margin,line,11pt]{resume}
+
+% imports
 \usepackage[defblank]{paralist}
 \usepackage{pdfpages}
 \usepackage{anysize}
-\usepackage[pdftex, unicode]{hyperref}
+\usepackage[unicode]{hyperref}
+
+% settings
 \hypersetup{
-	pdftitle={Alexander Kyte's Resume},
-	pdfauthor={Alexander Kyte},
+	pdftitle={Derek Gonyeo's Resume},
+	pdfauthor={Derek Gonyeo},
 	pdfborder={0 0 0},
-	% Not sure if this is needed.
 	unicode=true
 }
-\marginsize{0.375in}{1.875in}{0.6in}{0.5in}
+\marginsize{0.5in}{1.8in}{0.5in}{0.5in}
 \setdefaultitem{\footnotesize \textbullet}{}{}{}{}{}
 \setdefaultleftmargin{0em}{}{}{}{}{}
 \setdefaultenum{(a)}{(1)}{}{}{}{}
+
+% macros
 \newcommand{\rurl}[1]{\hfill {\footnotesize \url{#1}}}
 \newcommand{\rdate}[1]{\hfill {\small #1}}
-\renewcommand{\employer}[5]{\item[#1] - #2 \rdate{#3} \\* #4 \rurl{#5} \\*}
+\newcommand{\tab}[1]{\hspace{1em}}
+\renewcommand{\employer}[5]{\item[#1] - #2 \rdate{#3} \\* #4 \rurl{#5}}
+
+% begin resume
 \begin{document}
-\name{\Huge Alexander Kyte}
+\name{\Large Ross M. Bayer}
 \begin{resume}
-\section{\mysidestyle Contact \\ Information} \vspace{2mm}
+
+% contact
+\section{\mysidestyle Contact} 
 	\begin{asparablank}
-		\item Academic Residence: \hfill Permanent Residence : \hfill
-		\item 2325 Nathaniel Rochester Hall \hfill 81 Coach Lantern ln \hfill
-		\item Rochester, NY 14623 \hfill Scarborough ME 04074 \hfill
-		\\		
-		\item\href{mailto:alexmkyte@gmail.com}{alexmkyte@gmail.com} \hfill
+		\item 03191 Nathaniel Rochester Hall \hfill (757) 604-4736
+		\item Rochester, NY 14623 \hfill \href{mailto:ross.m.bayer@gmail.com}{ross.m.bayer@gmail.com}
 	\end{asparablank}
 
-\section{\mysidestyle Objective} \vspace{2mm}
-	\begin{asparablank} 
-	\item I am a Computer Science student with interests in compiler construction, language design, systems programming, security/cryptography, and web development. 
-	 \end{asparablank}
+% objective
+\section{\mysidestyle Objective}
+	Seeking a Summer/Fall 2014 co-op that will provide me with both interesting programming challenges and work experience.
 
+% education
 \section{\mysidestyle Education}
 	\begin{compactdesc}
 		\item[Rochester Institute of Technology] - Rochester, NY 
-		\begin{compactitem} { \small
+		\begin{compactitem} {
 			\item Major: B.S. Computer Science
-			\item GPA: 4.0
-			\item Standing: Dean's List, National Society of Collegiate Scholars
-			\item Minor: Applied Mathematics
-			\item Expected graduation: January 2016
+			\item GPA: 3.24
+			\item Minor: Web Development
+			\item Expected graduation: May 2017
 		} \end{compactitem}
 	\end{compactdesc}
 
+% experience
 \section{\mysidestyle Experience}
 	\begin{asparadesc}
-		\employer{Intelichek}{Center Valley, PA}{May 2013 - August 2013}{Lead Developer}{http://www.intelichek.com/}
-		\item\small Oversaw the bootstrapping of a large consumer Ruby on Rails website and helped hire the team that took over the project when we left. The site has not yet launched.
+		\employer{Sandridge Labs}{Alexandria, VA}{August 2011 - July 2011}{Ruby-on-Rails Developer}{http://sandridgelabs.github.io}
+
+		Worked as a paid intern on a stock market tracking web-app written in Ruby using the Ruby-on-Rails web framework.
 		\normalsize
-		\\	
-	\end{asparadesc}
-	\begin{asparadesc}
-		\employer{MacSmith}{Portland, ME}{November 2010 - March 2011}{Database and Networking Aid/Intern}{http://www.themacsmith.com/onlinedata.html}
-		\item\small Assisted in the repair and diagnosis of both consumer and school personal computers and servers.
-		\normalsize
-		\\	
 	\end{asparadesc}
 
-\section{\mysidestyle Technical Skills}
+% skills
+\section{\mysidestyle Skills}
 	\begin{compactdesc}
 		\item[Languages]
-			\small\item Python, Ruby, Java, C, Golang, x86 Assembly, Lisp, Haskell, Clojure, Coffeescript
+			\item\tab{} C, Python, Ruby, Java, MIPS Assembly
+			\vspace{1em}
 		\item[Frameworks]
-			\small\item Ruby on Rails, Ring, Revel
+			\item\tab{} Ruby on Rails
+			\vspace{1em}
 		\item[Operating Systems]
-			\small\item Linux - API and Userland, FreeBSD - Userland
+			\item\tab{} Arch and Debian-Based Linux Distributions, Mac OS X
+			\vspace{1em}
 		\item[Public Code Samples]
-			\small\item\href{https://bitbucket.org/Alexanderkyte}{https://bitbucket.org/Alexanderkyte} \hfill\small\item\href{https://github.com/alexanderkyte}{https://github.com/Alexanderkyte} \hfill
+			\item\tab{} \href{https://bitbucket.org/Rostepher}{https://bitbucket.org/Rostepher}\hfill
+			\item\tab{} \href{https://github.com/Rostepher}{https://github.com/Rostepher} \hfill
 	\end{compactdesc}
-	
-	
+
+% projects
 \section{\mysidestyle Projects}
-	\begin{asparablank}
-		\item {\bf Toy Language}
-		
-		\small Currently working on a purely functional programming language which leverages the LLVM platform for native code generation. Its primary inspired by Scala, C, and Ruby. 
-		\normalsize
+	\begin{compactdesc}
+		\item[Spoticli] \rurl{http://github.com/Rostepher/spoticli}
 		\\
-	
-		\item {\bf Minimum Viable Window Manager}
+		A simple spotify client for the terminal written in C utilizing libaa, libspotify and ncurses. Spoticli is currently in heavy development.
 		
-		\small Wrote a small floating window manager (229 lines of C with comments) for linux/FreeBSD in order to learn the Xorg API and to gain experience designing reliable event-driven interfaces. 
-		\normalsize
+		\vspace{1em}
+		
+		\item[Strcmp] \rurl{http://github.com/Rostepher/strcmp}
 		\\
-		
-		\item {\bf ShowMeTheCode}
-		
-		\small Wrote a naive parser for algebraic expressions with support for integrals and summations through higher-order functions. The script takes mathematical expressions and outputs python functions which evaluate the given expressions. This script formed the basis of later, unfinished projects. 
-		\normalsize		
-		\\
+		A ruby gem that provides string distance metrics which measure the similarity of two given strings. The algorithms included in the gem are the Levenshtein Distance and the Jaro-Winkler Distance. Each metric is written in C for a much needed speed boost, as the algorithms would be too costly if written in pure Ruby.
+	\end{compactdesc}
 
-		\item {\bf Quoridor}
-		
-		\small Wrote a small graph-based board game AI in a class setting, which achieved second place in competition with other groups' AIs.
-		\normalsize
-		\\
-		
-	\end{asparablank}	
-
+% extracurricular
 \section{\mysidestyle Extracurricular}
 	\begin{asparablank}
 		\item {\bf Computer Science House ({\small CSH})}\rurl{http://www.csh.rit.edu/}
-		\\		
-		\small A special interest house with a focus on project-based education in the field of computer science and its related sub-fields.
+        \\
+		A special interest house with a focus on project-based education in the field of computer science and its related sub-fields.
 	\end{asparablank}
 
 \end{resume}

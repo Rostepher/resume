@@ -1,108 +1,116 @@
-\documentclass[letterpaper,margin,line,11pt]{resume}
-
-% imports
+\documentclass[a4paper,margin,line]{resume}
 \usepackage[defblank]{paralist}
 \usepackage{pdfpages}
 \usepackage{anysize}
 \usepackage[unicode]{hyperref}
-
-% settings
 \hypersetup{
-	pdftitle={Ross Bayer's Resume},
-	pdfauthor={Ross Bayer},
+    pdftitle={Susan Lunn's Resume},
+	pdfauthor={Susan Lunn},
 	pdfborder={0 0 0},
 	unicode=true
 }
-\marginsize{0.5in}{1.8in}{0.5in}{0.5in}
+\marginsize{0.375in}{1.875in}{0.375in}{0.375in}
 \setdefaultitem{\footnotesize \textbullet}{}{}{}{}{}
 \setdefaultleftmargin{0em}{}{}{}{}{}
-\setdefaultenum{(a)}{(1)}{}{}{}{}
-
-% macros
 \newcommand{\rurl}[1]{\hfill {\footnotesize \url{#1}}}
 \newcommand{\rdate}[1]{\hfill {\small #1}}
-\newcommand{\tab}[1]{\hspace{1em}}
-\renewcommand{\employer}[5]{\item[#1] - #2 \rdate{#3} \\* #4 \rurl{#5}}
-
-% begin resume
+\newcommand{\rproject}[4]{\item[#1] \hfill \rdate{#2} \\* \hfill \rdate{#3} \strut\hfill \rurl{#4} \\*}
 \begin{document}
-\name{\Huge Ross M. Bayer}
+\vspace{10mm}
+\name{\Large Ross M. Bayer}
 \begin{resume}
-
-% contact
-\section{\mysidestyle Contact}
+\section{\mysidestyle Contact \\ Information} \vspace{2mm}
 	\begin{asparablank}
 		\item 715 Park Point Dr. Unit 3 \hfill \href{mailto:ross.m.bayer@gmail.com}{ross.m.bayer@gmail.com}
 		\item Rochester, NY 14623 \hfill \href{https://github.com/Rostepher}{github.com/Rostepher}
 		\item (757) 604-4736 \hfill \href{https://bitbucket.org/Rostepher}{bitbucket.org/Rostepher}
 	\end{asparablank}
 
-% objective
 \section{\mysidestyle Objective}
-	Seeking a Summer 2015 co-op that will provide me with both interesting programming challenges and work experience.
+	\begin{asparablank}
+    	\item Seeking 6 month co-op employment starting May 2015 until December 2015.
+	\end{asparablank}
 
-% education
 \section{\mysidestyle Education}
 	\begin{compactdesc}
-        \item[Rochester Institute of Technology] - Rochester, NY \rdate{September 2012 - Present}
-		\begin{compactitem} {
-			\item Major: Computer Science
-			\item GPA: 2.94
-			\item Expected graduation: May 2017
-			\item Software Courses
+		\item[Rochester Institute of Technology] - Rochester, NY \rdate{August 2012 - Present}
+		\begin{asparablank} { \small
+			\item Major: B.S. Computer Science
+		} \end{asparablank}
+		\begin{asparablank} { \small
+			\item Expected Graduation: May 2017
+		} \end{asparablank}
+	    \begin{asparablank} { \small
+            \item Software Courses
 			\begin{compactitem} { \small
-			    \item Mechanics of Programming
-			    \item Concepts of Computer Systems
-			    \item Introduction to Software Engineering
-                \item Programming Language Concepts
-                \item Concepts of Parallel and Distributed Systems
+                \item \hspace{1mm} Mechanics of Programming
+                \item \hspace{1mm} Concepts of Computer Systems
+                \item \hspace{1mm} Programming Language Concepts
+                \item \hspace{1mm} Compiler Construction
 			} \end{compactitem}
-		} \end{compactitem}
+        } \end{asparablank}
 	\end{compactdesc}
 
-% experience
+\section{\mysidestyle Technical Skills}
+	\begin{compactdesc}
+		\item[Languages: ] \begin{asparablank} { \small
+			\item C, Java, Python, Ruby, Rust
+		} \end{asparablank}
+        \item[Exposed Languages: ] \begin{asparablank}{ \small
+            \item Haskell, Javascript, Scheme, SQL, Standard ML
+        } \end{asparablank}
+		\item[Operating Systems: ] \begin{asparablank} { \small
+            \item Arch Linux, Debian-based Linux distributions, Mac OSX
+		} \end{asparablank}
+		\item[Tools: ] \begin{asparablank} { \small
+            \item Git, \LaTeX
+		} \end{asparablank}
+	\end{compactdesc}
+
+\section{\mysidestyle Personal Projects}
+    \begin{asparadesc}
+        \rproject{brainfuck}{December 2014 - Present}{}{https://github.com/Rostepher/brainfuck}
+        \small
+        An interpreter for the esoteric, turing complete programming language \href{https://en.wikipedia.org/wiki/Brainfuck}{brainfuck} written in \href{https://rust-lang.org}{Rust}. It utilizes a number of optimization strategies to exponentially decrease the number of operations and subsequently the execution time. It also supports emitting optimized internal Intermediate Representation (IR), optimized C code, or optimized Rust code.
+        \normalsize
+        \\
+
+        \rproject{libstrcmp}{June 2014 - December 2014}{}{https://github.com/Rostepher/libstrcmp}
+        \small
+        An optimized C library dedicated to fast implementations of various string distance metric, including the Levenshtein distance and the Jaro-Winkler distance, as well as phonetic metrics used in natural language processing and fuzzy string matching. It uses the Ruby Rake utility for building the shared object file and the Rspec testing framework and custom Ruby bindings for unit tests.
+        \normalsize
+        \\
+
+        \rproject{mget}{June 2014 - Present}{}{https://github.com/Rostepher/mget}
+        \small
+        A Ruby script that scrapes manga issues from the web using the ruby gem Nokogiri and packages the images in cbz (comic book zip) archives for easy reading on the go.
+        \normalsize
+        \\
+
+    \end{asparadesc}
+
 \section{\mysidestyle Experience}
 	\begin{asparadesc}
-        \employer{RockTenn}{Duluth, GA}{July 2014 - August 2014}{IT Intern}{http://www.rocktenn.com}
-        \vspace{1em}\\
-        As an IT Intern at RockTenn I worked on a Javascript extension for the BI tool QlikView that displayed geolocation data from the database and mapped points of interest. I also created python scripts to read and modify the database directly using the pyodbc module and SQL.
+        \rproject{RockTenn}{July 2014 - August 2014}{IT Intern}{https://www.rocktenn.com}
+        \\
+        \small
+        Worked on a Javascript extension for the BI tool QlikView that aggregated valid geolocation data from the database and mapped points of interest and other relvant information on an interactive map using the OpenLayers library. Also wrote python scripts to geocode addresses and store the results in the database using the pyodbc module and SQL.
         \normalsize
 	\end{asparadesc}
 
-% skills
-\section{\mysidestyle Technical Skills}
-	\begin{compactdesc}
-		\item[Languages]
-			\item\tab{} C, Python, Rust, Ruby, Java, Javascript, Haskell, Scheme, MIPS Assembly
-			\vspace{1em}
-		\item[Platforms]
-			\item\tab{} Linux [Arch and Debian-Based Distributions], Mac OS X
-			\vspace{1em}
-		\item[Tools]
-			\item\tab{} Vim, Git, \LaTeX, Make, GDB, Valgrind, Eclipse, IntelliJ
-	\end{compactdesc}
 
-% projects
-\section{\mysidestyle Projects}
-	\begin{compactdesc}
-		\item[Spoticli] \rurl{https://github.com/Rostepher/spoticli}
-		\\
-		A simple spotify client for the terminal written in C utilizing libspotify and ncurses. Spoticli is currently in heavy development.
-
-		\vspace{1em}
-
-        \item[libstrcmp] \rurl{https://github.com/Rostepher/libstrcmp}
-        \\
-        A C library dedicated to fast and efficient implementations of various string distance metrics and phonetic metrics used for tasks such as natural language processing and fuzzy-string matching.
-	\end{compactdesc}
-
-% extracurricular
-\section{\mysidestyle Extracurricular}
+\section{\mysidestyle Extracurricular Clubs Activities}
 	\begin{asparablank}
-		\item{\bf{}Computer Science House ({\small CSH})}\rurl{https://www.csh.rit.edu/}
-        \\
-		A special interest house with a focus on project-based education in the field of computer science and its related sub-fields.
+    \item{\bf{}FOSSBox({\small Free Open Source Software Box}) - {\small Active member}\rurl{http://magic.rit.edu/foss/}}
+    \\
+    A dedicated group that is part of the MAGIC center at RIT, dedicated to Free and Open Source Software, that sponsors numerous projects, hackathons and meetups for students.
+    \\
+
+    \item{\bf{}Computer Science House ({\small CSH}) - {\small Alumni member}\rurl{https://www.csh.rit.edu/}}
+    \\
+    A special interest house with a focus on project-based education in the field of computer science and its related sub-fields.
 	\end{asparablank}
 
 \end{resume}
 \end{document}
+

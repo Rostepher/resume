@@ -1,127 +1,216 @@
+% File:   resume.tex
+% Author: Ross Bayer
+
+% Document Configuration
 \documentclass[a4paper,margin,line]{resume}
+
+% Packages
 \usepackage[defblank]{paralist}
 \usepackage{pdfpages}
 \usepackage{anysize}
 \usepackage[unicode]{hyperref}
+
+% PDF Configuration
 \hypersetup{
     pdftitle={Ross Bayer's Resume},
 	pdfauthor={Ross Bayer},
 	pdfborder={0 0 0},
 	unicode=true
 }
+
+% Margin Configuration
 \marginsize{0.375in}{1.875in}{0.375in}{0.375in}
 \setdefaultitem{\footnotesize \textbullet}{}{}{}{}{}
 \setdefaultleftmargin{0em}{}{}{}{}{}
 
+% Constants
+\newcommand{\email}{\href{mailto:ross.m.bayer@gmail.com}
+                         {ross.m.bayer@gmail.com}}{
+\newcommand{\github}{\href{https://github.com/Rostepher}
+                          {github.com/Rostepher}}
+\newcommand{\linkedin}{\href{https://linkedin.com/in/Rostepher}
+                            {linkedin.com/in/Rostepher}}
+\newcommand{\rvspace}{1.5mm} % spacing between heading and description
+
 % Custom Commands
 \newcommand{\rurl}[1]{\hfill {\footnotesize \url{#1}}}
 \newcommand{\rdate}[1]{\hfill {\small #1}}
-\newcommand{\rproject}[3]{\item[#1] \hfill \rdate{#2} \\* \strut\hfill \rurl{#3} \\*}
-\newcommand{\remployer}[4]{\item[#1] \hfill \rdate{#2} \\* \hfill \rdate{#3} \strut\hfill \rurl{#4} \\*}
+\newcommand{\rdescription}[1]{\small #1 \normalsize}
+\newcommand{\ritem}[5] {
+    \item[#1]                               % name
+    \hfill \rdate{#2} \\*                   % date
+    \hfill {\small \emph{#3}}               % sub-heading
+    \strut \hfill \rurl{#4} \\*[\rvspace]    % url
+    \rdescription{#5}                       % description
+}
+\newcommand{\remployer}{\ritem}
+\newcommand{\rproject}{\ritem}
+\newcommand{\rorganization}[4] {
+    \item{\bf #1}                           % name
+    \rurl{#2} \\*                           % url
+    \hfill {\small \emph{#3}} \\*[\rvspace] % membership status
+    \rdescription{#4}                       % description
+}
 
 \begin{document}
-\vspace{10mm}
 \name{\Large Ross M. Bayer}
 \begin{resume}
 
 % Contact Information
 \section{\mysidestyle Contact \\ Information}
 	\begin{asparablank}
-		\item 715 Park Point Dr. Unit 3 \hfill \href{mailto:ross.m.bayer@gmail.com}{ross.m.bayer@gmail.com}
-		\item Rochester, NY 14623 \hfill \href{https://github.com/Rostepher}{github.com/Rostepher}
-		\item (757) 604-4736 \hfill \href{https://bitbucket.org/Rostepher}{bitbucket.org/Rostepher}
-        \item \hfill \href{https://linkedin.com/in/Rostepher}{linkedin.com/in/Rostepher}
-	\end{asparablank}
+		\item 715 Park Point Dr. Unit 3 \hfill \email
+		\item Rochester, NY 14623       \hfill \github
+        \item (757) 604-4736            \hfill \linkedin
+    \end{asparablank}
 
 % Objective
 \section{\mysidestyle Objective}
 	\begin{asparablank}
-    	\item Seeking a 6 month co-op or internship beginning May 2015 until December 2015.
+    	\item Seeking a 3 or 6 month co-op or internship beginning in either
+            Summer 2015 or Fall 2015.
 	\end{asparablank}
 
 % Education
 \section{\mysidestyle Education}
 	\begin{compactdesc}
-		\item[Rochester Institute of Technology] - Rochester, NY \rdate{August 2012 - Present}
+		\item[Rochester Institute of Technology] \rdate{August 2012 - Present}
 		\begin{asparablank} { \small
 			\item Major: B.S. Computer Science
-		} \end{asparablank}
-		\begin{asparablank} { \small
 			\item Expected Graduation: May 2017
 		} \end{asparablank}
-	    \begin{asparablank} { \small
-            \item Core Courses
-			\begin{compactitem} { \small
-                \item \hspace{1mm} Mechanics of Programming
-                \item \hspace{1mm} Concepts of Computer Systems
-                \item \hspace{1mm} Introduction to Computer Science Theory
-                \item \hspace{1mm} Programming Language Concepts
-                \item \hspace{1mm} Compiler Construction
-			} \end{compactitem}
-        } \end{asparablank}
 	\end{compactdesc}
 
 % Technical Skills
 \section{\mysidestyle Technical Skills}
-	\begin{compactdesc}
-		\item[Languages: ] \begin{asparablank} { \small
-			\item C, Java, Python, Ruby, Rust
-		} \end{asparablank}
-        \item[Exposed Languages: ] \begin{asparablank}{ \small
-            \item Haskell, Javascript, Scheme, SQL, Standard ML
+    \begin{compactdesc}
+        % Proficient Languages
+        \item[Proficient Languages:]
+        \begin{asparablank} {\small
+            \item C, Java, Python, Ruby, Rust
         } \end{asparablank}
-		\item[Operating Systems: ] \begin{asparablank} { \small
-            \item Arch Linux, Debian-based Linux distributions, Mac OSX
-		} \end{asparablank}
-		\item[Tools: ] \begin{asparablank} { \small
-            \item Git, \LaTeX, Vi/Vim
+
+        % Farmiliar Languages
+        \item[Farmiliar Languages:]
+        \begin{asparablank} {\small
+            \item Haskell, JavaScript, Scheme, Standard ML
+        } \end{asparablank}
+
+        % Operating Systems
+        \item[Operating Systems:]
+        \begin{asparablank} {\small
+            \item Linux (Arch and Debian based), Mac OS X
+        } \end{asparablank}
+
+        % Tools
+		\item[Tools:]
+        \begin{asparablank} { \small
+            \item Git, \LaTeX, Make, Regular Expressions, Vim
 		} \end{asparablank}
 	\end{compactdesc}
-
-% Personal Projects
-\section{\mysidestyle Personal Projects}
-    \begin{asparadesc}
-        \rproject{brainfuck}{December 2014 - Present}{https://github.com/Rostepher/brainfuck}
-        \small
-        An interpreter for the esoteric, turing complete programming language \href{https://en.wikipedia.org/wiki/Brainfuck}{Brainfuck} written in \href{https://rust-lang.org}{Rust}. It utilizes a number of optimization strategies to exponentially decrease the number of operations and subsequently the execution time of Brainfuck programs. It also supports emitting optimized internal Intermediate Representation (IR), optimized C code, or optimized Rust code.
-        \normalsize
-        \\
-
-        \rproject{libstrcmp}{June 2014 - December 2014}{https://github.com/Rostepher/libstrcmp}
-        \small
-        An optimized C library dedicated to fast implementations of various string distance metric, including the Levenshtein distance and the Jaro-Winkler distance, as well as other phonetic metrics used in natural language processing and fuzzy string matching. It uses the Ruby Rake utility for building the shared object file and the Rspec testing framework and custom Ruby FFI bindings for unit tests.
-        \normalsize
-        \\
-
-        \rproject{mget}{June 2014 - Present}{https://github.com/Rostepher/mget}
-        \small
-        A Ruby script that scrapes manga issues from the multiple sources on the web, using the ruby gem Nokogiri for HTML parsing and then packages the images in cbz (comic book zip) archives for easy reading on the go.
-        \normalsize
-        \\
-    \end{asparadesc}
 
 % Experience
 \section{\mysidestyle Experience}
 	\begin{asparadesc}
-        \remployer{RockTenn}{July 2014 - August 2014}{IT Intern}{https://www.rocktenn.com}
+        \remployer {Rochester Institute of Technology}
+                   {February 2015 - Present}
+                   {Research Assistant}
+                   {https://mlton.org}
+        {
+            Currently working as a research assistant for Professor Fluet on the
+            \href{https://en.wikipedia.org/wiki/Standard_ML}{\bf Standard ML},
+            whole-program optimizing compiler \href{https://mlton.org}{\bf MLton};
+            developing a general-purpose annotation system for attaching arbitrary
+            information to nodes in the Abstract Syntax Tree (AST) that the compiler
+            can utilize.
+        }
         \\
-        \small
-        Worked on a Javascript extension for the BI tool QlikView that aggregated valid geolocation data from the database and mapped points of interest and other relevant information on an interactive map using the popular OpenLayers library and Open Street Maps. Also wrote python scripts to geocode addresses and store the results in the database using the pyodbc module and SQL.
-        \normalsize
-	\end{asparadesc}
+
+        \remployer {RockTenn}
+                   {July 2014 - August 2014}
+                   {IT Intern}
+                   {https://rocktenn.com}
+        {
+            Worked on a {\bf JavaScript extension} for the BI tool QlikView
+            that aggregated valid geolocation data from the database and mapped
+            points of interest and other relevant information on an interactive
+            map using the popular \href{https://openlayers.org}{\bf OpenLayers}
+            library and \href{https://openstreetmap.org}{\bf Open Street Maps}.
+            Also wrote {\bf Python scripts to geocode addresses} and store
+            the results in the database using the
+            \href{https://code.google.com/p/pyodbc/}{pyodbc} module and SQL.
+	    }
+    \end{asparadesc}
+
+% Personal Projects
+\section{\mysidestyle Personal Projects}
+    \begin{asparadesc}
+        \rproject {brainfuck}
+                  {December 2014 - Present}
+                  {Optimizing \href{https://en.wikipedia.org/wiki/Brainfuck}
+                                   {Brainfuck} Interpreter}
+                  {https://github.com/Rostepher/brainfuck}
+        {
+            An {\bf interpreter} for the esoteric, turing complete programming
+            language \href{https://en.wikipedia.org/wiki/Brainfuck}{\bf Brainfuck}
+            written in \href{https://rust-lang.org}{\bf Rust}. It utilizes a
+            number of {\bf optimization strategies} to exponentially decrease
+            the number of operations and subsequently the execution time of
+            Brainfuck programs. It also supports emitting optimized internal
+            Intermediate Representation (IR), optimized C code, or optimized
+            Rust code.
+        }
+        \\
+
+        \rproject {libstrcmp}
+                  {June 2014 - December 2014}
+                  {String Distance Metric C Library}
+                  {https://github.com/Rostepher/libstrcmp}
+        {
+            An optimized {\bf C library} dedicated to fast implementations of
+            various {\bf string distance metrics}, including the
+            \href{https://en.wikipedia.org/wiki/Levenshtein_distance}
+            {\bf Levenshtein distance} and the
+            \href{https://en.wikipedia.org/wiki/Jaro-Winkler_distance}
+            {\bf Jaro-Winkler distance}, as well as other phonetic metrics used
+            in {\bf natural language processing} and {\bf fuzzy string matching}.
+        }
+        \\
+
+        \rproject {mget}
+                  {June 2014 - Present}
+                  {Manga Scraping Ruby Utility}
+                  {https://github.com/Rostepher/mget}
+        {
+            A Ruby utility to {\bf scrape manga chapters} from the multiple
+            online sources, using the ruby gem \href{http://nokogiri.org/}
+            {Nokogiri} for HTML parsing, and then package the images in a
+            cbz (comic book zip) archive for easy reading on the go.
+        }
+    \end{asparadesc}
 
 % Extracurricular Clubs and Activities
 \section{\mysidestyle Extracurricular Clubs Activities}
 	\begin{asparablank}
-    \item{\bf{}Free and Open Source Software Box ({\small FOSSBox}) - {\small Active member}\rurl{http://magic.rit.edu/foss/}}
-    \\
-    A group dedicated to Free and Open Source Software (FOSS) located inside the MAGIC@RIT center, that sponsors numerous projects, hackathons and meetups for like-minded students.
-    \\
+        \rorganization {FOSS@MAGIC}
+                       {https://magic.rit.edu/foss}
+                       {Active Member}
+        {
+            A group dedicated to Free and Open Source Software (FOSS) located
+            inside the MAGIC Center, formerly the Innovation Center, that
+            sponsors numerous projects, hackathons and meetings for like-minded
+            students.
+        }
+        \\
 
-    \item{\bf{}Computer Science House ({\small CSH}) - {\small Alumni member}\rurl{https://www.csh.rit.edu/}}
-    \\
-    A special interest house with a focus on project-based education in the field of computer science and its related sub-fields.
-	\end{asparablank}
+        \rorganization{Computer Science House ({\small CSH})}
+                      {https://csh.rit.edu}
+                      {Alumni Memeber}
+        {
+            A special interest house with a focus on project-based education in
+            the field of computer science and its related sub-fields.
+        }
+    \end{asparablank}
 \end{resume}
 \end{document}
 

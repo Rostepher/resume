@@ -30,7 +30,7 @@
                           {github.com/Rostepher}}
 \newcommand{\linkedin}{\href{https://linkedin.com/in/Rostepher}
                             {linkedin.com/in/Rostepher}}
-\newcommand{\rvspace}{1.5mm} % spacing between heading and description
+\newcommand{\rvspace}{2mm} % spacing between heading and description
 
 % Custom Commands
 \newcommand{\rurl}[1]{\hfill {\footnotesize \url{#1}}}
@@ -40,7 +40,7 @@
     \item[#1]                               % name
     \hfill \rdate{#2} \\*                   % date
     \hfill {\small \emph{#3}}               % sub-heading
-    \strut \hfill \rurl{#4} \\*[\rvspace]    % url
+    \strut \hfill \rurl{#4} \\*[\rvspace]   % url
     \rdescription{#5}                       % description
 }
 \newcommand{\remployer}{\ritem}
@@ -67,8 +67,8 @@
 % Objective
 \section{\mysidestyle Objective}
 	\begin{asparablank}
-    	\item Seeking a 3 or 6 month co-op or internship beginning in either
-            Summer 2015 or Fall 2015.
+    	\item Seeking a 3 or 6 month co-op beginning in either Summer 2015 or
+            Fall 2015.
 	\end{asparablank}
 
 % Education
@@ -109,39 +109,6 @@
 		} \end{asparablank}
 	\end{compactdesc}
 
-% Experience
-\section{\mysidestyle Experience}
-	\begin{asparadesc}
-        \remployer {Rochester Institute of Technology}
-                   {February 2015 - Present}
-                   {Research Assistant}
-                   {https://mlton.org}
-        {
-            Currently working as a research assistant for Professor Fluet on the
-            \href{https://en.wikipedia.org/wiki/Standard_ML}{\bf Standard ML},
-            whole-program optimizing compiler \href{https://mlton.org}{\bf MLton};
-            developing a general-purpose annotation system for attaching arbitrary
-            information to nodes in the Abstract Syntax Tree (AST) that the compiler
-            can utilize.
-        }
-        \\
-
-        \remployer {RockTenn}
-                   {July 2014 - August 2014}
-                   {IT Intern}
-                   {https://rocktenn.com}
-        {
-            Worked on a {\bf JavaScript extension} for the BI tool QlikView
-            that aggregated valid geolocation data from the database and mapped
-            points of interest and other relevant information on an interactive
-            map using the popular \href{https://openlayers.org}{\bf OpenLayers}
-            library and \href{https://openstreetmap.org}{\bf Open Street Maps}.
-            Also wrote {\bf Python scripts to geocode addresses} and store
-            the results in the database using the
-            \href{https://code.google.com/p/pyodbc/}{pyodbc} module and SQL.
-	    }
-    \end{asparadesc}
-
 % Personal Projects
 \section{\mysidestyle Personal Projects}
     \begin{asparadesc}
@@ -153,12 +120,10 @@
         {
             An {\bf interpreter} for the esoteric, turing complete programming
             language \href{https://en.wikipedia.org/wiki/Brainfuck}{\bf Brainfuck}
-            written in \href{https://rust-lang.org}{\bf Rust}. It utilizes a
+            written in \href{https://rust-lang.org}{\bf Rust}, utilizing a
             number of {\bf optimization strategies} to exponentially decrease
             the number of operations and subsequently the execution time of
-            Brainfuck programs. It also supports emitting optimized internal
-            Intermediate Representation (IR), optimized C code, or optimized
-            Rust code.
+            \href{https://en.wikipedia.org/wiki/Brainfuck}{Brainfuck} programs.
         }
         \\
 
@@ -168,11 +133,7 @@
                   {https://github.com/Rostepher/libstrcmp}
         {
             An optimized {\bf C library} dedicated to fast implementations of
-            various {\bf string distance metrics}, including the
-            \href{https://en.wikipedia.org/wiki/Levenshtein_distance}
-            {\bf Levenshtein distance} and the
-            \href{https://en.wikipedia.org/wiki/Jaro-Winkler_distance}
-            {\bf Jaro-Winkler distance}, as well as other phonetic metrics used
+            various {\bf string distance} and {\bf phonetic metrics} used
             in {\bf natural language processing} and {\bf fuzzy string matching}.
         }
         \\
@@ -182,15 +143,42 @@
                   {Manga Scraping Ruby Utility}
                   {https://github.com/Rostepher/mget}
         {
-            A Ruby utility to {\bf scrape manga chapters} from the multiple
-            online sources, using the ruby gem \href{http://nokogiri.org/}
-            {Nokogiri} for HTML parsing, and then package the images in a
-            cbz (comic book zip) archive for easy reading on the go.
+            A Ruby utility to {\bf scrape manga chapters} from online sources
+            and then packages each chapter in a cbz (comic book zip) archive.
         }
     \end{asparadesc}
 
+% Experience
+\section{\mysidestyle Experience}
+	\begin{asparadesc}
+        \remployer {Rochester Institute of Technology}
+                   {February 2015 - Present}
+                   {Research Assistant}
+                   {https://mlton.org}
+        {
+            Learning about the general structure and implementation strategies
+            of compilers.\\
+            Implementing a general-purpose annotation system for the
+            \href{https://mlton.org}{\bf MLton compiler}.
+        }
+        \\
+
+        \remployer {RockTenn}
+                   {July 2014 - August 2014}
+                   {IT Intern}
+                   {https://rocktenn.com}
+        {
+            Created a {\bf JavaScript extension} for the BI tool QlikView.\\
+            Wrote {\bf Python scripts} to {\bf geocode} addresses and insert
+            data into the database.\\
+            Used \href{https://openlayers.org}{\bf OpenLayers} and
+            \href{https://openstreetmap.org}{\bf Open Stree Maps} to plot points
+            of interest.
+	    }
+    \end{asparadesc}
+
 % Extracurricular Clubs and Activities
-\section{\mysidestyle Extracurricular Clubs Activities}
+\section{\mysidestyle Extracurricular Clubs \& Activities}
 	\begin{asparablank}
         \rorganization {FOSS@MAGIC}
                        {https://magic.rit.edu/foss}
@@ -203,9 +191,9 @@
         }
         \\
 
-        \rorganization{Computer Science House ({\small CSH})}
-                      {https://csh.rit.edu}
-                      {Alumni Memeber}
+        \rorganization {Computer Science House ({\small CSH})}
+                       {https://csh.rit.edu}
+                       {Alumni Memeber}
         {
             A special interest house with a focus on project-based education in
             the field of computer science and its related sub-fields.

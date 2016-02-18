@@ -24,12 +24,6 @@
 \setdefaultleftmargin{0em}{}{}{}{}{}
 
 % Constants
-\newcommand{\email}{\href{mailto:ross.m.bayer@gmail.com}
-                         {ross.m.bayer@gmail.com}}{
-\newcommand{\github}{\href{https://github.com/Rostepher}
-                          {github.com/Rostepher}}
-\newcommand{\linkedin}{\href{https://linkedin.com/in/Rostepher}
-                            {linkedin.com/in/Rostepher}}
 \newcommand{\rvspace}{2mm} % spacing between heading and description
 
 % Custom Commands
@@ -53,160 +47,146 @@
 }
 
 \begin{document}
-\name{\Large Ross M. Bayer}
+\name{\Large Ross M. Bayer \hspace{108mm} \footnotesize ross.m.bayer@gmail.com}
 \begin{resume}
-
-% Contact Information
-\section{\mysidestyle Contact \\ Information}
-	\begin{asparablank}
-		\item 601 R Street, Apt 411 \hfill \email
-		\item Lincoln, NE 68501     \hfill \github
-        \item (757) 604-4736        \hfill \linkedin
-    \end{asparablank}
-
-% Objective
-\section{\mysidestyle Objective}
-	\begin{asparablank}
-    	\item Seeking a semester co-op beginning Fall 2015.
-	\end{asparablank}
 
 % Education
 \section{\mysidestyle Education}
-	\begin{compactdesc}
-		\item[Rochester Institute of Technology] \rdate{August 2012 - Present}
-		\begin{asparablank} { \small
-			\item Major: B.S. Computer Science
-			\item Expected Graduation: May 2017
-		} \end{asparablank}
-	\end{compactdesc}
+\begin{compactdesc}
+    \item[Rochester Institute of Technology] \rdate{August 2012 - Present}
+    \begin{asparablank} { \small
+        \item Major: B.S. Computer Science
+        \item Expected Graduation: May 2017
+    } \end{asparablank}
+\end{compactdesc}
 
 % Technical Skills
 \section{\mysidestyle Technical Skills}
-    \begin{compactdesc}
-        % Proficient Languages
-        \item[Proficient Languages:]
-        \begin{asparablank} {\small
-            \item C, Java, Python, Ruby, Rust
-        } \end{asparablank}
+\begin{compactdesc}
+    % Proficient Languages
+    \item[Proficient Languages:]
+    \begin{asparablank} {\small
+        \item C, Go, Java, Python, Standard ML
+    } \end{asparablank}
 
-        % Farmiliar Languages
-        \item[Farmiliar Languages:]
-        \begin{asparablank} {\small
-            \item Haskell, JavaScript, Scheme, Standard ML
-        } \end{asparablank}
+    % Farmiliar Languages
+    \item[Farmiliar Languages:]
+    \begin{asparablank} {\small
+        \item Haskell, JavaScript, Prolog, Rust, Ruby, Scheme
+    } \end{asparablank}
 
-        % Operating Systems
-        \item[Operating Systems:]
-        \begin{asparablank} {\small
-            \item Linux (Arch and Debian based), Mac OS X
-        } \end{asparablank}
+    % Operating Systems
+    \item[Operating Systems:]
+    \begin{asparablank} {\small
+        \item Linux (Arch and Debian based), Mac OS X
+    } \end{asparablank}
 
-        % Tools
-		\item[Tools:]
-        \begin{asparablank} { \small
-            \item Git, \LaTeX, Make, Regular Expressions, Finite Automata, Vim
-		} \end{asparablank}
-	\end{compactdesc}
-
-% Personal Projects
-\section{\mysidestyle Personal Projects}
-    \begin{asparadesc}
-        \rproject {brainfuck}
-                  {December 2014 - Present}
-                  {Optimizing \href{https://en.wikipedia.org/wiki/Brainfuck}
-                                   {Brainfuck} Interpreter}
-                  {https://github.com/Rostepher/brainfuck}
-        {
-            An {\bf interpreter} for the esoteric, turing complete programming
-            language \href{https://en.wikipedia.org/wiki/Brainfuck}{\bf Brainfuck}
-            written in \href{https://rust-lang.org}{\bf Rust}, utilizing a
-            number of {\bf optimization strategies} to exponentially decrease
-            the number of operations and subsequently the execution time of
-            \href{https://en.wikipedia.org/wiki/Brainfuck}{Brainfuck} programs.
-        }
-        \\
-
-        \rproject {libstrcmp}
-                  {June 2014 - December 2014}
-                  {String Distance Metric C Library}
-                  {https://github.com/Rostepher/libstrcmp}
-        {
-            An optimized {\bf C library} dedicated to fast implementations of
-            various {\bf string distance} and {\bf phonetic metrics} used
-            in {\bf natural language processing} and {\bf fuzzy string matching}.
-        }
-        \\
-
-        \rproject {mget}
-                  {June 2014 - Present}
-                  {Manga Scraping Ruby Utility}
-                  {https://github.com/Rostepher/mget}
-        {
-            A Ruby utility to {\bf scrape manga chapters} from online sources
-            and then packages each chapter in a cbz (comic book zip) archive.
-        }
-    \end{asparadesc}
+    % Tools
+    \item[Tools:]
+    \begin{asparablank} { \small
+        \item Git, \LaTeX, Make, CMake, Regular Expressions, Finite Automata, Vim
+    } \end{asparablank}
+\end{compactdesc}
 
 % Experience
 \section{\mysidestyle Experience}
-	\begin{asparadesc}
-        \remployer {Hudl}
-                   {June 2015 - August 2015}
-                   {Dev Tools Intern}
-                   {https://hudl.com}
-        {
-            Intern with Hudl working on internal development tools.
-        }
-        \\
+\begin{asparadesc}
+    \remployer {Rochester Institute of Technology}
+               {February 2016 - Present}
+               {Reserach Assistant}
+               {https://mlton.org}
+    {
+        Re-implementing MLton's build system to support modern architectures and
+        techniques and improving overall build quality. Switching from GNU Make
+        and small number of handwritten build scripts to a CMake build system.
+    }
+    \\
 
-        \remployer {Rochester Institute of Technology}
-                   {February 2015 - May 2015}
-                   {Research Assistant}
-                   {https://mlton.org}
-        {
-            Learning about the general structure and implementation strategies
-            of compilers.\\
-            Implementing a general-purpose annotation system for the
-            \href{https://mlton.org}{\bf MLton compiler}.
-        }
-        \\
+    \remployer {Hudl}
+               {June 2015 - December 2015}
+               {Software Development Intern}
+               {https://hudl.com}
+    {
+        Sole developer on a mission critical application in Hudl's alerting
+        pipeline. Created two open-source Go packages to interface with PagerDuty
+        and Postmark's RESTful APIs.
+    }
+    \\
 
-        \remployer {RockTenn}
-                   {July 2014 - August 2014}
-                   {IT Intern}
-                   {https://rocktenn.com}
-        {
-            Created a {\bf JavaScript extension} for the BI tool QlikView.\\
-            Wrote {\bf Python scripts} to {\bf geocode} addresses and insert
-            data into the database.\\
-            Used \href{https://openlayers.org}{\bf OpenLayers} and
-            \href{https://openstreetmap.org}{\bf Open Street Maps} to plot points
-            of interest.
-	    }
-    \end{asparadesc}
+    \remployer {Rochester Institute of Technology}
+               {February 2015 - May 2015}
+               {Research Assistant}
+               {https://mlton.org}
+    {
+        Learning about the general structure and implementation strategies
+        of compilers.\\
+        Implementing a general-purpose annotation system for the
+        \href{https://mlton.org}{\bf MLton compiler}.
+    }
+    \\
+\end{asparadesc}
+
+% Personal Projects
+\section{\mysidestyle Personal Projects}
+\begin{asparadesc}
+    \rproject {adhoc-prologmorphism}
+              {February 2016 - Present}
+              {Independent Study on Adhoc-Polymorphism}
+              {https://github.com/Rostepher/adhoc-prologmorphism}
+    {
+        A collection of documents and interpreters from my independent study on
+        Adhoc-Polymorphism in Hindley-Milner type systems.
+    }
+    \\
+
+    \rproject {brainfuck}
+              {December 2014 - Present}
+              {Optimizing \href{https://en.wikipedia.org/wiki/Brainfuck}
+                               {Brainfuck} Interpreter}
+              {https://github.com/Rostepher/brainfuck}
+    {
+        An {\bf interpreter} for the esoteric, turing complete programming
+        language \href{https://en.wikipedia.org/wiki/Brainfuck}{\bf Brainfuck}
+        written in \href{https://rust-lang.org}{\bf Rust}, utilizing a
+        number of {\bf optimization strategies} to exponentially decrease
+        the number of operations and subsequently the execution time of
+        \href{https://en.wikipedia.org/wiki/Brainfuck}{Brainfuck} programs.
+    }
+    \\
+
+    \rproject {libstrcmp}
+              {June 2014 - December 2014}
+              {String Distance Metric C Library}
+              {https://github.com/Rostepher/libstrcmp}
+    {
+        An optimized {\bf C library} dedicated to fast implementations of
+        various {\bf string distance} and {\bf phonetic metrics} used
+        in {\bf natural language processing} and {\bf fuzzy string matching}.
+    }
+    \\
+
+    \rproject {mget}
+              {June 2014}
+              {Manga Scraping Ruby Utility}
+              {https://github.com/Rostepher/mget}
+    {
+        A Ruby utility to {\bf scrape manga chapters} from online sources
+        and then packages each chapter in a cbz (comic book zip) archive.
+    }
+\end{asparadesc}
 
 % Extracurricular Clubs and Activities
 \section{\mysidestyle Extracurricular Clubs \& Activities}
-	\begin{asparablank}
-        \rorganization {FOSS@MAGIC}
-                       {https://magic.rit.edu/foss}
-                       {Active Member}
-        {
-            A group dedicated to Free and Open Source Software (FOSS) located
-            inside the MAGIC Center, formerly the Innovation Center, that
-            sponsors numerous projects, hackathons and meetings for like-minded
-            students.
-        }
-        \\
+\begin{asparablank}
+    \rorganization {Computer Science House ({\small CSH})}
+                   {https://csh.rit.edu}
+                   {Alumni Memeber}
+    {
+        A special interest house with a focus on project-based education in
+        the field of computer science and its related sub-fields.
+    }
+\end{asparablank}
 
-        \rorganization {Computer Science House ({\small CSH})}
-                       {https://csh.rit.edu}
-                       {Alumni Memeber}
-        {
-            A special interest house with a focus on project-based education in
-            the field of computer science and its related sub-fields.
-        }
-    \end{asparablank}
 \end{resume}
 \end{document}
 
